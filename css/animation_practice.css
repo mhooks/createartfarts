@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'Oswald reg';
+  src:url(../fonts/Oswald-ExtraLight.ttf);
+}
+@font-face {
+  font-family: 'Oswald dark';
+  src:url(../fonts/Oswald-Bold.ttf);
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+}
+
+.grid_container {
+	width: 400px;
+	height: 300px;
+	position: relative;
+	left: 50%;
+	top: 48%; /* for optical centering */
+	margin-top: -50px;
+	margin-left: -100px;
+}
+
+.mono {
+	font-family: 'Oswald reg';
+	font-size: 7em;
+	float: left;
+	margin-left: 5px;
+}
+
+.alt {
+  font-family: 'Oswald dark';
+  font-size: 7em;
+  float: left;
+  margin-left: 5px;
+}
+
+@keyframes c_fade {
+	0% 	{ opacity: 1;}
+	100% { opacity: 0;}
+}
+.c {
+	opacity: 1;
+	animation: c_fade 4s;
+	animation-fill-mode: forwards;
+}/* this is where all of your CSS styles go */
+
+@keyframes r_move {
+	0%		{top: 0px; opacity: 1;}
+	50%		{top: -150px; right: 0px;}
+  75%   {top: 0px; right: -175px;}
+	100%	{top: 0px; right: -175px; opacity: 0;}
+
+}
+.r {
+	position: relative;
+	animation: r_move 5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes e_move {
+	0%       	{top: 0px; left: 0px;}
+	25%				{top: -150px; left: 0px;}
+	50%				{top: -150px; left: 300px;}
+	75%      	{top: 300px; left: 300px; opacity: .5;}
+  100%      {opacity: 0;}
+}
+.e {
+position: relative;
+animation: e_move 4s linear;
+animation-fill-mode: forwards;
+}
+
+@keyframes a_move {
+	0%		{top: 0px; color: black;}
+	100%	{top: 300px; color: white;}
+}
+.a {
+	position: relative;
+	animation: a_move 1s alternate infinite ease-out cubic-bezier(0,0,1,1);
+}
+
+@keyframes aa_fade {
+	0% 	{ opacity: 0;}
+	100% { opacity: 1;}
+}
+.aa {
+  position: absolute;
+  opacity: 1;
+  animation: aa_fade 5s;
+  left: 171px;
+  color: red;
+}
+@keyframes rr_fade {
+	0% 	{ opacity: 0;}
+	100% { opacity: 1;}
+}
+.rr {
+  position: absolute;
+  opacity: 1;
+  animation: rr_fade 5s;
+  left: 230px;
+  color: orange;
+}
+@keyframes t_fademove {
+	0% 	{top: 0px; opacity: 1;}
+  25% {top: 0px; left: 25px;}
+  50% {top: 0px; left: 75px;}
+	100% {top: 0px; opacity: 0;}
+}
+.t {
+  position: relative;
+	opacity: 1;
+	animation: t_fademove 3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tt_move {
+	0%		{top: -230px; left: 295px; opacity: 0;}
+	100%	{top: 0px; left: 295px; opacity: 1;}
+}
+.tt {
+  position: absolute;
+	opacity: 1;
+  color: blue;
+	animation: tt_move 2s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ff_move {
+	0%		{top: -125px; left: 0px; opacity: 0;}
+	100%	{top: 0px; left: 125px; opacity: 1;}
+}
+.ff {
+  position: absolute;
+	opacity: 1;
+  color: teal;
+	animation: ff_move 5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ss_fade {
+	0%		{top: 0px; left: 340px; opacity: 0;}
+	100%	{top: 0px; left: 340px; opacity: 1;}
+}
+.ss {
+  position: absolute;
+	opacity: 1;
+  color: purple;
+	animation: ss_fade 10s ease;
+  animation-fill-mode: forwards;
+}
